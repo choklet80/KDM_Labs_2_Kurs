@@ -223,4 +223,13 @@ body {
   100% {
     width: 89px;
   }
+}
+.overWindow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(138, 138, 138, 0.377);
+  z-index: 3;
 }/*# sourceMappingURL=main.css.map */

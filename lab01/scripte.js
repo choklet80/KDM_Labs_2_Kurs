@@ -13,3 +13,4 @@ $('.off').click(function () {
     $('.lol').removeClass('lol_on')
     $('.lol').addClass('lol_off')
 })
+
