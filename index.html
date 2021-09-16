@@ -10,70 +10,9 @@
       src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
     ></script>
 
-    <style type="text/css">
-      #mynetwork {
-        width: 600px;
-        height: 400px;
-        border: 1px solid lightgray;
-      }
-    </style>
+    
   </head>
   <body>
-    <div id="mynetwork"></div>
-
-    <script type="text/javascript">
-      // create an array with nodes
-      let N_id = 7;
-      var nodes = new vis.DataSet([
-        { id: 1, label: "x1" },
-        { id: 2, label: "x2" },
-        { id: 3, label: "x3" },
-        { id: 4, label: "x4" },
-        { id: 5, label: "x5" },
-        { id: 6, label: "x6" },
-      ]);
-
-      // create an array with edges
-      let E_id = "y";
-      var edges = new vis.DataSet([
-        { id: "y1", from: 1, to: 2 },
-        { id: "y2", from: 1, to: 2 },
-        { id: "y3", from: 2, to: 4 },
-        { id: "y4", from: 2, to: 5 },
-      ]);
-
-      // create a network
-      var container = document.getElementById("mynetwork");
-
-      // provide the data in the vis format
-      var data = {
-        nodes: nodes,
-        edges: edges,
-      };
-      var options = {
-        manipulation: {
-          enabled: true,
-          addNode: function (nodeData, callback) {
-            nodeData.id = id++;
-
-            callback(nodeData);
-          },
-          addNode: function (nodeData, callback) {
-            nodeData.id = id++;
-
-            callback(nodeData);
-          },
-        },
-      };
-      var op = {
-        manipulation: {
-          enabled: false,
-
-        }
-      }
-
-      // initialize your network!
-      var network = new vis.Network(container, data, options);
-    </script>
+    <a href="../KDM_Labs_2_Kurs/lab01/index.html"></a>
   </body>
 </html>
