@@ -16,10 +16,10 @@ body {
 
 .program-wr {
   padding: 30px;
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: #560bad;
   width: 100%;
   border-radius: 20px;
@@ -29,11 +29,12 @@ body {
 .field-wr {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .field {
   padding: 10px 20px;
-  max-width: 400px;
+  
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -51,8 +52,9 @@ body {
     height: 400px;
     background-color: #fff;
     width: 100%;
-    max-width: 250px;
+    max-width: 350px;
     border-radius: 10px;
+    padding: 10px;
   }
 }
 
@@ -191,16 +193,49 @@ body {
 }
 
 
-.overWindow{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(138, 138, 138, 0.377);
-  z-index: 3;
+.draw-field{
+  background-color: white;
+  border-radius: 10px;
+  height: 400px;
+  width: 400px;
+  margin: 10px;
 }
 
-.field_draw{
+.table-action-wr{
+  display: flex;
+  margin-top: 15px;
+}
+
+.table-dif{
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border-radius: 50%;
+  border: 3px solid rgba(128, 128, 128, 0.205);
+  cursor: pointer;
+  svg{
+    width: 20px;
+    height: 20px;
+  }
+}
+table {
+  border-spacing: 0px;
+  border-collapse:collapse;
+}
+tr,td{
   
+}
+td{
+
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid black;
+}
+.dd{
+  margin-bottom: 65px;
 }

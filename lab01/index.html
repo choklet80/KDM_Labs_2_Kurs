@@ -16,6 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   </head>
 
   <body>
@@ -24,10 +26,31 @@
         <div class="field-wr">
           <div class="left-field field">
             <h4 class="field__caption">Таблиця Cуміжності</h4>
-            <div id="sym_table" class="field__table">
-
+            <div  class="field__table">
+              <table id="symtable">
+                <tr>
+                  <td></td>
+                  <td>x1</td>
+                  
+              </tr>
+              <tr>
+                  <td>x1</td>
+                  <td></td>
+                  
+              </tr>
+              
+              </table>
+            </div>
+            <div class="table-action-wr">
+              <div class="table-dif table_minus" id="sym_minus">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="minus" class="svg-inline--fa fa-minus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+              </div>
+              <div class="table-dif table_plus" id="sym_plus">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+              </div>
             </div>
           </div>
+
           <div class="arrows">
             <div class="arrows__left arrows__arrow">
               <i class="fas fa-arrow-left"></i>
@@ -38,7 +61,36 @@
           </div>
           <div class="right-field field">
             <h4 class="field__caption">Таблиця Інцидентності</h4>
-            <div class="field__table"></div>
+            <div class="field__table">
+              <table id="inztable">
+                <tr>
+                  <td></td>
+                  
+                  
+              </tr>
+              <tr>
+                  <td>x1</td>
+                  
+                  
+              </tr>
+            </table>
+            </div>
+            <div class="table-action-wr">
+              <div class="table-dif table_minus" id="inz_minus">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="minus" class="svg-inline--fa fa-minus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+              </div>
+              <div class="table-dif table_plus" id="inz_plus">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+              </div>
+            </div>
+          </div>
+          <div class="field dd">
+            <h4 class="field__caption">
+              Граф
+            </h4>
+            <div id="graph" class="draw-field">
+  
+            </div>
           </div>
         </div>
 
@@ -51,7 +103,7 @@
             <div class="lol lol_off"></div>
           </div>
           <div class="action-btn-wr">
-            <div class="btn btn--red clear">
+            <div class="btn btn--red clear" id="clear">
               <p>Звільнити</p>
             </div>
             <div id="build" class="btn build">
@@ -61,17 +113,13 @@
         </div>
       </div>
     </main>
-    <div class="overWindow">
-      <div class="field_draw">
-        
-      </div>
-    </div>
+  
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../lab01/scripte.js"></script>
   </body>
-  <script
-    src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"
-  ></script>
-  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-  <script src="../lab01/scripte.js"></script>
+  
 </html>
