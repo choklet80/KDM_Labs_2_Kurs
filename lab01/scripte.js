@@ -684,26 +684,14 @@ function build_graph() {
             },
             smooth: {
               type: "dynamic",
-              forceDirection: "horizontal",
+              
               roundness: 0.0
             },
             arrows: {
               to: { enabled: true, scaleFactor: 1, type: "arrow" }
             }
           },
-          layout: {
-            hierarchical: {
-              direction: "LR",
-              sortMethod: 'directed'
-            }
-          },
-          interaction: {
-            tooltipDelay: 200,
-            hover: true
-          },
-          physics: {
-            enabled: false
-          }
+          
     };
 
     if(nor){
