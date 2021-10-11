@@ -670,7 +670,26 @@ function build_graph() {
         nodes: nodes,
         edges: edges,
     };
-    var options_nor = {}
+    var options_nor = {
+        nodes: {
+            font: {
+              size: 22
+            },
+            borderWidth: 3
+          },
+          edges: {
+            font: {
+              align: "top"
+            },
+            smooth: {
+              type: "dynamic",
+              
+              roundness: 0.0
+            },
+            
+            length:400,
+          },
+    }
     var options_or = {
         nodes: {
             font: {
@@ -689,7 +708,8 @@ function build_graph() {
             },
             arrows: {
               to: { enabled: true, scaleFactor: 1, type: "arrow" }
-            }
+            },
+            length:400,
           },
           
     };
