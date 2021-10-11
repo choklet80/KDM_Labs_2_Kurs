@@ -8,15 +8,11 @@ body {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.5px;
   color: #7209b7;
+  background-color: #4895ef;
 }
 
 .bg-hero {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  padding: 0 15px;
+  padding: 15px;
   background-color: #4895ef;
 }
 
@@ -25,7 +21,6 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
-  margin-top: 5%;
   background-color: #560bad;
   width: 100%;
   border-radius: 20px;
@@ -75,8 +70,7 @@ body {
 
 .action-btn-wr {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
 }
 
 .program-bottom-wr {
@@ -90,18 +84,18 @@ body {
   padding: 10px;
   margin: 10px;
   color: white;
-  background-color: #4895ef;
+  background-color: rgba(72, 150, 239, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 120px;
   border-radius: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.432);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   font-weight: 500;
 }
 .btn--red {
-  background-color: #ce4257;
+  background-color: rgba(206, 66, 87, 0.3);
 }
 .btn p {
   display: block;
@@ -148,7 +142,7 @@ body {
   top: 3px;
   left: 3px;
   width: 89px;
-  height: 34px;
+  height: 35px;
   border-radius: 20px;
   transition: all 0.3s;
 }
@@ -238,6 +232,13 @@ body {
   margin-top: 15px;
 }
 
+.myNN {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-weight: normal;
+}
+
 .table-dif {
   width: 40px;
   height: 40px;
@@ -247,7 +248,7 @@ body {
   align-items: center;
   margin: 5px;
   border-radius: 50%;
-  border: 3px solid rgba(128, 128, 128, 0.205);
+  border: 3px solid rgba(128, 128, 128, 0.3);
   cursor: pointer;
 }
 .table-dif svg {
