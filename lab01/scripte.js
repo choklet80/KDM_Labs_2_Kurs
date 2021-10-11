@@ -185,7 +185,7 @@ table_s.addEventListener('contextmenu', function (e) {
                 if(table_i.rows[row_i].cells[i].innerText == 1 && table_i.rows[cel_i].cells[i].innerText == -1){
                     table_i.rows[row_i].cells[i].innerText = 0;
                     table_i.rows[cel_i].cells[i].innerText = 0;
-                    table_s.rows[row_i].cells[cel_i].innerText = 0;
+                    table_s.rows[row_i].cells[cel_i].innerText = Number(table_s.rows[row_i].cells[cel_i].innerText) - 1;
                     for (let k = 0; k < table_i.rows.length; k++) {
                         table_i.rows[k].deleteCell(i);
                     }
